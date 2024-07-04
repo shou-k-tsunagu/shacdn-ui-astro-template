@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .sp-only {
+    @apply block md:hidden;
+  }
+  .pc-only {
+    @apply hidden md:block;
+  }
+}

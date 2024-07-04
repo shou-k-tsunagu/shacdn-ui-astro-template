@@ -1,0 +1,27 @@
+---
+import '@/styles/globals.css'
+import Footer from '@/components/Footer/Footer.astro'
+import Header from '@/components/Header/Header.astro'
+import Meta, { type Props as MetaProps } from '@/components/Meta/Meta.astro'
+
+export interface Props {
+  meta: MetaProps
+}
+
+const { meta } = Astro.props
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <Meta {...meta} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <style is:global></style>
+  </body>
+</html>
