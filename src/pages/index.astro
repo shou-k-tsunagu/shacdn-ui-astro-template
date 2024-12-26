@@ -1,6 +1,19 @@
 ---
+import { Image } from 'astro:assets'
 import MainVisual from '@/components/MainVisual/MainVisual.astro'
 import Layout from '@/layouts/Layout.astro'
+
+import buttonArrow from '@/assets/img_button_arrow.svg'
+import iconD from '@/assets/img_logo_d.png'
+import iconF from '@/assets/img_logo_f.png'
+import iconI from '@/assets/img_logo_i.png'
+import logo from '@/assets/img_logo_nabe.png'
+import iconV from '@/assets/img_logo_v.png'
+import iconX from '@/assets/img_logo_x.png'
+import iconN from '@/assets/img_small_nabe.png'
+
+import { ShopCard } from '@/components/Common/ShopCard'
+import { foodData, shopData } from '@/lib/shop-data'
 ---
 
 <Layout
@@ -9,7 +22,333 @@ import Layout from '@/layouts/Layout.astro'
   }}
 >
   <MainVisual />
-  <h1>Title</h1>
+  <section class="bg-main bg-top bg-fixed bg-cover">
+    <div
+      class="bg-black/80 pt-[30px] md:pt-[39px] pb-[114px] px-[20px] md:px-0"
+    >
+      <div class="max-w-[960px] mx-auto">
+        <p
+          class="text-[18px] leading-[26px] font-bold md:hidden mb-[22px] text-white text-center"
+        >
+          公式SNS
+        </p>
+        <div
+          class="flex md:justify-center items-center justify-between md:gap-x-[33px] mb-[61px] md:mb-[92px] text-white"
+        >
+          <p class="text-[20px] leading-[29px] font-bold hidden md:block">
+            公式SNS
+          </p>
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><Image
+              src={iconF}
+              alt=""
+              class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
+            /></a
+          >
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><Image
+              src={iconD}
+              alt=""
+              class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
+            /></a
+          >
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><Image
+              src={iconX}
+              alt=""
+              class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
+            /></a
+          >
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><Image
+              src={iconI}
+              alt=""
+              class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
+            /></a
+          >
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><Image
+              src={iconV}
+              alt=""
+              class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
+            /></a
+          >
+        </div>
+
+        <div
+          class="bg-black/50 drop-shadow-og rounded-[10px] px-[20px] py-[30px] md:pt-[36px] md:pl-[82px] md:pr-[83px] md:pb-[46px] mb-[36px] md:mb-[39px]"
+        >
+          <p
+            class="text-yellow text-[20px] md:text-[24px] leading-[33px] md:leading-[44px] font-bold mb-[17px]"
+          >
+            全国から選りすぐりの鍋が神宮外苑に集結！<br />
+            お酒やビールとともに日本の食文化を楽しめるイベント！
+          </p>
+          <p
+            class="text-[16px] md:text-[17px] leading-[34px] md:leading-[35px] font-bold text-white"
+          >
+            日本全国の「鍋」をテーマにした食の祭典が、神宮外苑で開催されます！<br
+            />
+            四季折々の食材と伝統の味わいを、地域特有の鍋料理を通じてお届け。老舗の味から新しい創作鍋まで、選りすぐりの品々を心ゆくまで堪能して<br
+            />
+            ください。さらに、地元で愛される地酒やビールと鍋の絶妙なペアリングもお楽しみいただけます。<br
+            />
+            温かな鍋料理が繋ぐ「人と人」「地域と地域」の絆を感じながら、日本の多彩な食文化を体験できるイベントを創出します。
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col gap-y-[11px] items-center mb-[26px] md:mb-[41px]"
+        >
+          <p
+            class="text-[24px] md:text-[35px] leading-[48px] md:leading-[53px] font-bold text-white [text-shadow:_0_0_10px_rgb(255_132_1_/_1)]"
+          >
+            開催概要
+          </p>
+          <Image src={iconN} alt="" class="w-[31px] md:w-[46px]" />
+        </div>
+
+        <div
+          class="bg-white px-[20px] pt-[30px] md:pt-[52px] md:pl-[123px] md:pb-[59px] rounded-[10px] drop-shadow-og mb-[56px] md:mb-[70px]"
+        >
+          <table
+            class="table-fixed text-[15px] md:text-[18px] font-semibold text-black"
+          >
+            <tbody class="block">
+              <tr class="flex flex-col w-full md:flex-row">
+                <td class="content-start">
+                  <div
+                    class="w-[97px] md:w-[108px] rounded-[6px] bg-tag text-center leading-[30px] md:leading-[35px] text-white"
+                  >
+                    イベント名
+                  </div>
+                </td>
+                <td
+                  class="pb-[25px] md:pb-[37px] pl-0 md:pl-[19px] pt-[13px] md:pt-0 leading-[31px] md:leading-[35px] w-full"
+                >
+                  鍋の国JAPAN & 北海道フェスティバル
+                </td>
+              </tr>
+              <tr class="flex flex-col w-full md:flex-row">
+                <td class="content-start">
+                  <div
+                    class="w-[97px] md:w-[108px] rounded-[6px] bg-tag text-center leading-[30px] md:leading-[35px] text-white"
+                  >
+                    日時
+                  </div>
+                </td>
+                <td
+                  class="pt-[13px] md:pt-0 pb-[24px] pl-0 md:pl-[19px] leading-[31px] md:leading-[35px]"
+                >
+                  2025年1月10日(金)~2025年2月2日(日)<br />
+                  <p
+                    class="text-[13px] md:text-[15px] font-medium leading-[26px] md:leading-[22px]"
+                  >
+                    平日15：00～22:00 土日祝日11:00~22:00（L.O21:30)<br />
+                    ※雨天決行（荒天時は中止）
+                  </p>
+                </td>
+              </tr>
+              <tr class="flex flex-col w-full md:flex-row">
+                <td class="content-start">
+                  <div
+                    class="w-[97px] md:w-[108px] rounded-[6px] bg-tag text-center leading-[30px] md:leading-[35px] text-white"
+                  >
+                    会場
+                  </div>
+                </td>
+                <td
+                  class="pt-[13px] md:pt-0 pb-[25px] md:pb-[35px] pl-0 md:pl-[19px] leading-[31px] md:leading-[35px]"
+                >
+                  神宮外苑 聖徳記念絵画館前・総合球技場
+                </td>
+              </tr>
+              <tr class="flex flex-col w-full md:flex-row">
+                <td class="content-start">
+                  <div
+                    class="w-[97px] md:w-[108px] rounded-[6px] bg-tag text-center leading-[30px] md:leading-[35px] text-white"
+                  >
+                    入場料
+                  </div>
+                </td>
+                <td
+                  class="pt-[13px] md:pt-0 pb-[12px] md:pb-[35px] pl-0 md:pl-[19px] leading-[31px] md:leading-[35px]"
+                >
+                  無料
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          class="flex flex-col gap-y-[11px] items-center mb-[26px] md:mb-[49px]"
+        >
+          <p
+            class="text-[24px] md:text-[35px] leading-[48px] md:leading-[53px] font-bold text-white [text-shadow:_0_0_10px_rgb(255_132_1_/_1)]"
+          >
+            出店情報
+          </p>
+          <Image src={iconN} alt="" class="w-[31px] md:w-[46px]" />
+        </div>
+
+        <div
+          class="flex md:justify-center justify-between lg:justify-normal md:flex-row flex-wrap gap-[8px] md:gap-[22px] mb-[54px] md:mb-[91px]"
+        >
+          {
+            shopData.map((shop) => {
+              // if (shop.image !== "") {
+              return (
+                <ShopCard
+                  client:load
+                  title={shop.title}
+                  subTitle={shop.subTitle}
+                  menu={shop.menu}
+                  description={shop.description}
+                  image={shop.image}
+                  imgClass={shop.imgClass}
+                  dialogInfo={
+                    foodData.find((info) => info.id === shop.id)?.info
+                  }
+                />
+              )
+              // }
+            })
+          }
+        </div>
+
+        <div
+          class="flex flex-col gap-y-[11px] items-center mb-[12px] md:mb-[46px]"
+        >
+          <p
+            class="text-[24px] md:text-[35px] leading-[48px] md:leading-[53px] font-bold text-white [text-shadow:_0_0_10px_rgb(255_132_1_/_1)]"
+          >
+            アクセスマップ
+          </p>
+          <Image src={iconN} alt="" class="w-[31px] md:w-[46px]" />
+        </div>
+
+        <div class="text-center text-white">
+          <p class="text-[14px] md:text-[18px] leading-[32px]">
+            神宮外苑 聖徳記念絵画館前・総合球技場
+          </p>
+          <p
+            class="text-[12px] md:text-[16px] leading-[29px] md:leading-[32px]"
+          >
+            〒160-0013 東京都新宿区霞ヶ丘町2-3
+          </p>
+        </div>
+
+        <div class="h-[510px] md:h-[570px] mt-[13px] mb-[31px] md:mb-[50px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3799.7388224802235!2d139.71583270799505!3d35.67373035866539!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9a5c17dc4b%3A0x6d7bcc8fc8c135b3!2z44CSMTYwLTAwMTMg5p2x5Lqs6YO95paw5a6_5Yy66Zye44O25LiY55S677yS4oiS77yT!5e0!3m2!1sja!2sjp!4v1734680956126!5m2!1sja!2sjp"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <div
+            class="w-full md:w-[334px] relative bg-button py-[19px] pl-[32px] text-white text-[20px] leading-[32px] font-bold rounded-[10px] mx-auto mb-[52px] md:mb-[157px]"
+          >
+            会場へのアクセスはこちら
+            <Image
+              src={buttonArrow}
+              alt=""
+              class="absolute top-[28px] right-[21px]"
+            />
+          </div>
+        </a>
+
+        <div
+          class="flex flex-col text-white md:flex-row md:h-[418px] md:rounded-[30px] bg-black px-[20px] md:px-[50px] pt-[26px] pb-[41px] md:py-[36px]"
+        >
+          <div class="">
+            <Image
+              src={logo}
+              alt=""
+              class="w-[187px] md:w-[164px] mx-auto md:mx-0 mb-[22px] md:mb-[36px]"
+            />
+            <p
+              class="text-[16px] leading-[24px] font-bold mb-[13px] text-center md:text-left"
+            >
+              公式SNS
+            </p>
+            <div
+              class="flex justify-center md:justify-start flex-wrap gap-[16.6px] w-full md:max-w-[177px]"
+            >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><Image src={iconF} alt="" class="w-[42px] h-[42px]" /></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><Image src={iconD} alt="" class="w-[42px] h-[42px]" /></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><Image src={iconX} alt="" class="w-[42px] h-[42px]" /></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><Image src={iconI} alt="" class="w-[42px] h-[42px]" /></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><Image src={iconV} alt="" class="w-[42px] h-[42px]" /></a
+              >
+            </div>
+          </div>
+          <div class="md:ml-[69px] font-semibold">
+            <p
+              class="text-[18px] md:text-[27px] leading-[29px] md:leading-[47px] mt-[35px] md:mt-0"
+            >
+              鍋の国JAPAN &<br class="md:hidden" />北海道フェスティバル
+            </p>
+            <table
+              class="mt-[28px] md:mt-[30px] table-fixed text-[13px] md:text-[14px]"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    class="content-start w-[56px] md:w-[79px] md:border-r md:border-[#888888]"
+                    >日時</td
+                  >
+                  <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]">
+                    2025年1月10日(金)~2025年2月2日(日)<br />
+                    <span class="text-[12px] md:text-[13px] font-medium"
+                      >平日15：00～22:00 土日祝日<br
+                        class="md:hidden"
+                      />11:00~22:00（L.O21:30)<br
+                      />※雨天決行（荒天時は中止）</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-start md:border-r md:border-[#888888]"
+                    >会場</td
+                  >
+                  <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]"
+                    >神宮外苑 聖徳記念絵画館前・総合球技場</td
+                  >
+                </tr>
+                <tr>
+                  <td class="content-start md:border-r md:border-[#888888]"
+                    >入場料</td
+                  >
+                  <td class="pl-0 md:pl-[26px]"> 無料 </td>
+                </tr>
+              </tbody>
+            </table>
+            <p
+              class="mt-[5px] md:mt-[32px] text-[13px] font-medium leading-[22px]"
+            >
+              主催：鍋の国JAPAN実行委員会<br />
+              後援・協力：東京都/新宿区/新宿観光振興協会
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
