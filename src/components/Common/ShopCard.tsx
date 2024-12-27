@@ -31,7 +31,6 @@ export const ShopCard = ({
 	title,
 	subTitle,
 	menu,
-	description,
 	image,
 	imgClass,
 	dialogInfo,

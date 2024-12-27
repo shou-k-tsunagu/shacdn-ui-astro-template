@@ -18,11 +18,11 @@ import { foodData, shopData } from '@/lib/shop-data'
 
 <Layout
   meta={{
-    title: 'TOP',
+    title: '鍋の国JAPAN 2025 in 神宮外苑',
   }}
 >
   <MainVisual />
-  <section class="bg-main bg-top bg-fixed bg-cover">
+  <section class="bg-mainSp md:bg-main bg-top bg-fixed bg-contain md:bg-cover">
     <div
       class="bg-black/80 pt-[30px] md:pt-[39px] pb-[114px] px-[20px] md:px-0"
     >
@@ -89,8 +89,7 @@ import { foodData, shopData } from '@/lib/shop-data'
           >
             日本全国の「鍋」をテーマにした食の祭典が、神宮外苑で開催されます！<br
             />
-            四季折々の食材と伝統の味わいを、地域特有の鍋料理を通じてお届け。老舗の味から新しい創作鍋まで、選りすぐりの品々を心ゆくまで堪能して<br
-            />
+            四季折々の食材と伝統の味わいを、地域特有の鍋料理を通じてお届け。老舗の味から新しい創作鍋まで、選りすぐりの品々を心ゆくまで堪能して
             ください。さらに、地元で愛される地酒やビールと鍋の絶妙なペアリングもお楽しみいただけます。<br
             />
             温かな鍋料理が繋ぐ「人と人」「地域と地域」の絆を感じながら、日本の多彩な食文化を体験できるイベントを創出します。
@@ -99,6 +98,7 @@ import { foodData, shopData } from '@/lib/shop-data'
 
         <div
           class="flex flex-col gap-y-[11px] items-center mb-[26px] md:mb-[41px]"
+          id="overview"
         >
           <p
             class="text-[24px] md:text-[35px] leading-[48px] md:leading-[53px] font-bold text-white [text-shadow:_0_0_10px_rgb(255_132_1_/_1)]"
@@ -144,7 +144,9 @@ import { foodData, shopData } from '@/lib/shop-data'
                   <p
                     class="text-[13px] md:text-[15px] font-medium leading-[26px] md:leading-[22px]"
                   >
-                    平日15：00～22:00 土日祝日11:00~22:00（L.O21:30)<br />
+                    平日15：00～22:00 土日祝日<br
+                      class="md:hidden"
+                    />11:00~22:00（L.O21:30)<br />
                     ※雨天決行（荒天時は中止）
                   </p>
                 </td>
@@ -183,6 +185,7 @@ import { foodData, shopData } from '@/lib/shop-data'
 
         <div
           class="flex flex-col gap-y-[11px] items-center mb-[26px] md:mb-[49px]"
+          id="shop-info"
         >
           <p
             class="text-[24px] md:text-[35px] leading-[48px] md:leading-[53px] font-bold text-white [text-shadow:_0_0_10px_rgb(255_132_1_/_1)]"
@@ -219,6 +222,7 @@ import { foodData, shopData } from '@/lib/shop-data'
 
         <div
           class="flex flex-col gap-y-[11px] items-center mb-[12px] md:mb-[46px]"
+          id="access-map"
         >
           <p
             class="text-[24px] md:text-[35px] leading-[48px] md:leading-[53px] font-bold text-white [text-shadow:_0_0_10px_rgb(255_132_1_/_1)]"
@@ -264,7 +268,7 @@ import { foodData, shopData } from '@/lib/shop-data'
         </a>
 
         <div
-          class="flex flex-col text-white md:flex-row md:h-[418px] md:rounded-[30px] bg-black px-[20px] md:px-[50px] pt-[26px] pb-[41px] md:py-[36px]"
+          class="flex flex-col text-white md:flex-row md:h-[418px] rounded-[6px] md:rounded-[30px] bg-black px-[20px] md:px-[50px] pt-[26px] pb-[41px] md:py-[36px]"
         >
           <div class="">
             <Image
@@ -301,7 +305,7 @@ import { foodData, shopData } from '@/lib/shop-data'
             <p
               class="text-[18px] md:text-[27px] leading-[29px] md:leading-[47px] mt-[35px] md:mt-0"
             >
-              鍋の国JAPAN &<br class="md:hidden" />北海道フェスティバル
+              鍋の国JAPAN &<br class="md:hidden" /> 北海道フェスティバル
             </p>
             <table
               class="mt-[28px] md:mt-[30px] table-fixed text-[13px] md:text-[14px]"
@@ -342,7 +346,10 @@ import { foodData, shopData } from '@/lib/shop-data'
               class="mt-[5px] md:mt-[32px] text-[13px] font-medium leading-[22px]"
             >
               主催：鍋の国JAPAN実行委員会<br />
-              後援・協力：東京都/新宿区/新宿観光振興協会
+              後援・協力：東京都/新宿区/新宿観光振興協会<br />
+              <span class="text-[10px]"
+                >飲酒は20歳になってから。お酒は楽しく適量で。</span
+              >
             </p>
           </div>
         </div>

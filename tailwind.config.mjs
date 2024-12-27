@@ -41,6 +41,7 @@ module.exports = {
 				tag: "linear-gradient(97.95deg, #E53101 11.55%, #FF9901 92%)",
 				button: "linear-gradient(95.48deg, #E53101 2.06%, #FF9901 99.92%)",
 				main: "url('/assets/common/img_bg.jpg')",
+				mainSp: "url('/assets/common/img_bg_sp.jpg')",
 			},
 			keyframes: {
 				"accordion-down": {

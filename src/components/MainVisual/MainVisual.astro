@@ -3,14 +3,48 @@
 ---
 
 <div>
-  <img
-    class="h-full w-full hidden md:block"
-    src="/assets/common/img_mv.jpg"
-    alt=""
-  />
+  <div class="hidden md:block relative h-screen w-screen">
+    <img
+      class="object-cover absolute top-0 left-0 h-full w-full"
+      src="/assets/common/img_mv_bg.jpg"
+      alt=""
+    />
+    <div class="relative max-w-[794px] mx-auto flex flex-col items-center">
+      <div class="relative h-[68vh]">
+        <img class="h-full" src="/assets/common/img_mv_icon1.png" alt="" />
+        <img
+          class="absolute top-[5vh] left-[-22vh] h-[60vh] z-10"
+          src="/assets/common/img_mv_icon2.png"
+          alt=""
+        />
+        <img
+          class="absolute bottom-[-32vh] left-[-26vh] h-[45vh]"
+          src="/assets/common/img_mv_icon3.png"
+          alt=""
+        />
+        <img
+          class="absolute h-[26vh] bottom-[-18vh] right-[-14vh]"
+          src="/assets/common/img_mv_icon4.svg"
+          alt=""
+        />
+      </div>
+      <img
+        class="mt-[-4.3vh] h-[23vh] z-10"
+        src="/assets/common/img_mv_icon5.svg"
+        alt=""
+      />
+      <img
+        class="ml-[8vh] h-[7.4vh] z-10"
+        src="/assets/common/img_mv_icon6.svg"
+        alt=""
+      />
+    </div>
+  </div>
   <img
     class="h-full w-full block md:hidden"
     src="/assets/common/img_mv_sp.jpg"
     alt=""
   />
+  <!-- <div class="relative h-screen w-screen block md:hidden">
+  </div> -->
 </div>
