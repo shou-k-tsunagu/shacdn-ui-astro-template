@@ -10,11 +10,13 @@ import { cn } from "@/lib/utils";
 import clsx from "clsx";
 
 export interface Props {
+	id: string;
 	title: string;
 	subTitle?: string;
 	menu: string;
 	description: string;
 	image: string;
+	image2?: string;
 	imgClass?: string;
 	dialogInfo?: {
 		title: string;
@@ -28,34 +30,49 @@ export interface Props {
 
 // const { title, subTitle, description, image, imaclassName } = Astro.props;
 export const ShopCard = ({
+	id,
 	title,
 	subTitle,
 	menu,
 	image,
+	image2,
 	imgClass,
 	dialogInfo,
 }: Props) => {
 	return (
 		<Dialog>
 			<DialogTrigger asChild className="cursor-pointer">
-				<div className="flex flex-col gap-[10px] drop-shadow-og w-[calc(50%-4px)] md:max-w-[305px] rounded-[10px] bg-white px-[10px] md:px-[17px] pb-[20px] md:pb-[18px] pt-[15px] md:pt-[18px] text-black">
+				<div className="flex flex-col gap-[10px] drop-shadow-og w-full md:w-[calc(50%-10px)] rounded-[10px] bg-white px-[10px] md:px-[17px] pb-[20px] md:pb-[18px] pt-[15px] md:pt-[18px] text-black">
 					<p className="text-[16px] md:leading-[44px] md:text-[22px] font-semibold text-red">
-						{title}
+						{id}.{title}
 					</p>
 					{/* <p className="text-[12px] md:text-[16px] md:leading-[24px] text-red mb-[12px]">
 						{subTitle || "　"}
 					</p> */}
-					{image && (
+					
+						<div className="flex justify-between">
+						{image && (
 						<img
 							src={image}
 							alt=""
 							className={clsx(
-								"max-h-[202px] md:h-[202px] rounded-[10px] border border-[#CCCCCC]",
+								"w-[calc(50%-6px)] rounded-[10px] border border-[#CCCCCC]",
 								imgClass ? imgClass : "object-cover",
 							)}
 						/>
-					)}
-					<p className="text-[13px] md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
+						)}
+						{image2 && (
+						<img
+							src={image2}
+							alt=""
+							className={clsx(
+								"w-[calc(50%-6px)] rounded-[10px] border border-[#CCCCCC]",
+								imgClass ? imgClass : "object-cover",
+							)}
+						/>
+						)}
+						</div>
+					<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
 						{menu}
 					</p>
 					{/* <p className="text-[13px] md:text-[14px] font-medium mb-[7px] md:mb-[12px]">

@@ -22,10 +22,8 @@ import { foodData, shopData } from '@/lib/shop-data'
   }}
 >
   <MainVisual />
-  <section class="bg-mainSp md:bg-main bg-top bg-fixed bg-contain md:bg-cover">
-    <div
-      class="bg-black/80 pt-[30px] md:pt-[39px] pb-[114px] px-[20px] md:px-0"
-    >
+  <section class="bg-mainSp md:bg-main bg-top bg-fixed bg-cover">
+    <div class="bg-black/80 pt-[30px] md:pt-[39px] px-[20px] md:px-0">
       <div class="max-w-[960px] mx-auto">
         <p
           class="text-[18px] leading-[26px] font-bold md:hidden mb-[22px] text-white text-center"
@@ -144,9 +142,9 @@ import { foodData, shopData } from '@/lib/shop-data'
                   <p
                     class="text-[13px] md:text-[15px] font-medium leading-[26px] md:leading-[22px]"
                   >
-                    平日15：00～22:00 土日祝日<br
+                    平日15:00～21:00 土日祝日<br
                       class="md:hidden"
-                    />11:00~22:00（L.O21:30)<br />
+                    />11:00~21:00（L.O20:30)<br />
                     ※雨天決行（荒天時は中止）
                   </p>
                 </td>
@@ -182,7 +180,9 @@ import { foodData, shopData } from '@/lib/shop-data'
             </tbody>
           </table>
         </div>
+      </div>
 
+      <div class="max-w-[1200px] mx-auto">
         <div
           class="flex flex-col gap-y-[11px] items-center mb-[26px] md:mb-[49px]"
           id="SHOP"
@@ -196,7 +196,7 @@ import { foodData, shopData } from '@/lib/shop-data'
         </div>
 
         <div
-          class="flex md:justify-center justify-between lg:justify-normal md:flex-row flex-wrap gap-[8px] md:gap-[22px] mb-[54px] md:mb-[91px]"
+          class="flex justify-between md:flex-row flex-wrap gap-y-[8px] md:gap-y-[22px] mb-[54px] md:mb-[91px]"
         >
           {
             shopData.map((shop) => {
@@ -204,11 +204,13 @@ import { foodData, shopData } from '@/lib/shop-data'
               return (
                 <ShopCard
                   client:load
+                  id={shop.id}
                   title={shop.title}
                   subTitle={shop.subTitle}
                   menu={shop.menu}
                   description={shop.description}
                   image={shop.image}
+                  image2={shop.image2}
                   imgClass={shop.imgClass}
                   dialogInfo={
                     foodData.find((info) => info.id === shop.id)?.info
@@ -227,7 +229,9 @@ import { foodData, shopData } from '@/lib/shop-data'
             Coming Soon
           </p>
         </div> -->
+      </div>
 
+      <div class="max-w-[960px] mx-auto">
         <div
           class="flex flex-col gap-y-[11px] items-center mb-[12px] md:mb-[46px]"
           id="ACCESS"
@@ -327,9 +331,9 @@ import { foodData, shopData } from '@/lib/shop-data'
                   <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]">
                     2025年1月10日(金)~2025年2月2日(日)<br />
                     <span class="text-[12px] md:text-[13px] font-medium"
-                      >平日15：00～22:00 土日祝日<br
+                      >平日15:00～21:00 土日祝日<br
                         class="md:hidden"
-                      />11:00~22:00（L.O21:30)<br
+                      />11:00~21:00（L.O20:30)<br
                       />※雨天決行（荒天時は中止）</span
                     >
                   </td>
@@ -354,12 +358,23 @@ import { foodData, shopData } from '@/lib/shop-data'
               class="mt-[5px] md:mt-[32px] text-[13px] font-medium leading-[22px]"
             >
               主催：鍋の国JAPAN実行委員会<br />
-              後援・協力：東京都/新宿区/新宿観光振興協会<br />
+              後援・協力：新宿区/新宿観光振興協会<br />
               <span class="text-[10px]"
                 >飲酒は20歳になってから。お酒は楽しく適量で。</span
               >
             </p>
           </div>
+        </div>
+
+        <div
+          class="mt-[20px] md:mt-[41px] text-white text-center text-[13px] leading-[23px] md:leading-[33px] pb-[60px] md:pb-[10px]"
+        >
+          Copyright © 鍋の国JAPAN実行委員会 All Rights Reserved.<br
+            class="md:hidden"
+          />
+          主催者：<a href="https://www.bf-c.co.jp/" target="_blank"
+            >株式会社ビー・エフ・シー</a
+          >
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 ---
 
 <div id="TOP">
-  <div class="hidden md:block relative h-screen w-screen">
+  <div class="hidden min-[1080px]:block relative h-screen w-screen">
     <img
       class="object-cover absolute top-0 left-0 h-full w-full"
       src="/assets/common/img_mv_bg.jpg"
@@ -40,7 +40,9 @@
       />
     </div>
   </div>
-  <div class="relative h-screen w-screen max-h-[740px] block md:hidden">
+  <div
+    class="relative h-screen w-screen max-h-[740px] block min-[1080px]:hidden"
+  >
     <img
       class="object-cover absolute top-0 left-0 h-full w-full"
       src="/assets/common/sp/img_mv_bg.jpg"
@@ -49,12 +51,12 @@
     <img
       src="/assets/common/sp/img_mv_icon3.png"
       alt=""
-      class="absolute bottom-0"
+      class="absolute bottom-0 left-[50%] translate-x-[-50%] max-h-[164px]"
     />
     <div
       class="absolute top-[6vh] max-w-[340px] w-full left-[50%] translate-x-[-50%]"
     >
-      <img src="/assets/common/sp/img_mv_icon1.png" alt="" />
+      <img src="/assets/common/sp/img_mv_icon1.png" alt="" class="" />
       <img
         src="/assets/common/sp/img_mv_icon5.svg"
         alt=""
