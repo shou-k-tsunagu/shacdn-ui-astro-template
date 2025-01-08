@@ -6,6 +6,7 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
+import { foodData } from "@/lib/shop-data";
 import { cn } from "@/lib/utils";
 import clsx from "clsx";
 
@@ -13,19 +14,14 @@ export interface Props {
 	id: string;
 	title: string;
 	subTitle?: string;
-	menu: string;
+	menu?: string;
+	menu1: string;
+	menu2: string;
 	description: string;
 	image: string;
 	image2?: string;
+	image3?: string;
 	imgClass?: string;
-	dialogInfo?: {
-		title: string;
-		price: string;
-		catchcopy?: string;
-		description: string;
-		image: string;
-		imgClass?: string;
-	}[];
 }
 
 // const { title, subTitle, description, image, imaclassName } = Astro.props;
@@ -34,10 +30,12 @@ export const ShopCard = ({
 	title,
 	subTitle,
 	menu,
+	menu1,
+	menu2,
 	image,
 	image2,
+	image3,
 	imgClass,
-	dialogInfo,
 }: Props) => {
 	return (
 		<Dialog>
@@ -50,31 +48,60 @@ export const ShopCard = ({
 						{subTitle || "　"}
 					</p> */}
 					
-						<div className="flex justify-between">
+						<div className={cn("flex justify-between", image3 ? "gap-[6px]" : "gap-0")}>
 						{image && (
-						<img
-							src={image}
-							alt=""
-							className={clsx(
-								"w-[calc(50%-6px)] rounded-[10px] border border-[#CCCCCC]",
-								imgClass ? imgClass : "object-cover",
-							)}
-						/>
+							<div className="w-[calc(50%-6px)]">
+								<img
+									src={image}
+									alt=""
+									className={clsx(
+										"w-full rounded-[10px] border border-[#CCCCCC] h-[120px] md:h-[204px]",
+										imgClass ? imgClass : "object-cover",
+									)}
+								/>
+								<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
+									{menu1}
+								</p>
+							</div>
 						)}
 						{image2 && (
-						<img
-							src={image2}
-							alt=""
-							className={clsx(
-								"w-[calc(50%-6px)] rounded-[10px] border border-[#CCCCCC]",
-								imgClass ? imgClass : "object-cover",
-							)}
-						/>
+							<div className="w-[calc(50%-6px)]">
+								<img
+									src={image2}
+									alt=""
+									className={clsx(
+										"w-full rounded-[10px] border border-[#CCCCCC] h-[120px] md:h-[204px]",
+										imgClass ? imgClass : "object-cover",
+									)}
+								/>
+								<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
+									{menu2}
+								</p>
+							</div>
+						)}
+						{image3 && (
+							<div className="w-[calc(50%-6px)]">
+								<img
+									src={image3}
+									alt=""
+									className={clsx(
+										"w-full rounded-[10px] border border-[#CCCCCC] h-[120px] md:h-[204px]",
+										imgClass ? imgClass : "object-cover",
+									)}
+								/>
+								<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
+								いちご飴
+								</p>
+							</div>
 						)}
 						</div>
-					<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
-						{menu}
-					</p>
+
+						{menu && (
+						<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
+							{menu}
+						</p>
+						)}
+					
 					{/* <p className="text-[13px] md:text-[14px] font-medium mb-[7px] md:mb-[12px]">
 						{description}
 					</p> */}
@@ -94,7 +121,48 @@ export const ShopCard = ({
 						</p>
 					</DialogTitle>
 					<DialogDescription className="overflow-y-auto max-h-[493px] text-[#222222]">
-						{dialogInfo?.map((info) => {
+						{id !== "12" && (<p className="text-[14px] md:text-[22px] text-red font-normal mb-[8px]">
+							{menu1}
+						</p>)}
+						{foodData.find((food) => food.id === id)?.info1?.map((info) => {
+							// if (info.image !== "") {
+							return (
+								<div
+									key={info?.title}
+									className="flex flex-col justify-between md:flex-row border-b border-[#E6E6E6] md:border-none md:gap-x-[72px] mb-[20px] md:mb-[30px] md:mr-[5px]"
+								>
+									{info.image && (
+										<img
+											src={info?.image}
+											alt=""
+											className={cn(
+												"order-0 mt-[10px] md:mt-0 md:order-1 max-h-[245px] w-full md:max-w-[244px] md:h-[190px] mx-auto md:mx-0 object-cover border border-[#CCCCCC] rounded-[15px]",
+											)}
+										/>
+									)}
+									<div className="mt-[16px]">
+										<p className="text-[16px] md:text-[22px] font-semibold leading-[30px]">
+											{info?.title}　{info?.price ? `${info.price}円` : ""}
+										</p>
+										<div className="my-[18px] font-semibold text-[16px] md:text-[18px] leading-[30px]">
+											{info?.catchcopy && (
+												<span className="bg-[#FFE4E2] py-[7px] px-[8px]">
+													{info.catchcopy}
+												</span>
+											)}
+										</div>
+										<p className="text-[16px] leading-[30px] mb-[17px] md:mb-[6px]">
+											{info?.description}
+										</p>
+									</div>
+								</div>
+							);
+							// }
+						})}
+						{id !== "12" && (<p className="text-[14px] md:text-[22px] text-red font-normal mb-[8px]">
+							{menu2}
+						</p>)}
+						{foodData.find((food) => food.id === id)?.info2?.map((info) => {
 							// if (info.image !== "") {
 							return (
 								<div

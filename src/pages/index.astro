@@ -11,9 +11,11 @@ import logo from '@/assets/img_logo_nabe.png'
 import iconV from '@/assets/img_logo_v.png'
 import iconX from '@/assets/img_logo_x.png'
 import iconN from '@/assets/img_small_nabe.png'
+import banner from '@/assets/img_banner.png'
+import bannerSp from '@/assets/img_banner_sp.png'
 
 import { ShopCard } from '@/components/Common/ShopCard'
-import { foodData, shopData } from '@/lib/shop-data'
+import { shopData } from '@/lib/shop-data'
 ---
 
 <Layout
@@ -22,6 +24,26 @@ import { foodData, shopData } from '@/lib/shop-data'
   }}
 >
   <MainVisual />
+  <div
+    class="fixed bottom-[20px] right-[8px] w-[320px] z-10 cursor-pointer hidden md:block"
+  >
+    <a
+      href="https://www.kkday.com/ja/product/266112?cid=12407&ud1=nabeofficialsite"
+      target="_blank"
+      rel="noopener noreferrer"
+      class=""><Image src={banner} alt="" /></a
+    >
+  </div>
+  <div
+    class="fixed bottom-0 right-1/2 translate-x-1/2 w-[331px] z-10 cursor-pointer md:hidden"
+  >
+    <a
+      href="https://www.kkday.com/ja/product/266112?cid=12407&ud1=nabeofficialsite"
+      target="_blank"
+      rel="noopener noreferrer"
+      class=""><Image src={bannerSp} alt="" /></a
+    >
+  </div>
   <section class="bg-mainSp md:bg-main bg-top bg-fixed bg-cover">
     <div class="bg-black/80 pt-[30px] md:pt-[39px] px-[20px] md:px-0">
       <div class="max-w-[960px] mx-auto">
@@ -31,12 +53,12 @@ import { foodData, shopData } from '@/lib/shop-data'
           公式SNS
         </p>
         <div
-          class="flex md:justify-center items-center justify-between md:gap-x-[33px] mb-[61px] md:mb-[92px] text-white"
+          class="flex justify-center items-center gap-x-[33px] mb-[61px] md:mb-[92px] text-white"
         >
           <p class="text-[20px] leading-[29px] font-bold hidden md:block">
             公式SNS
           </p>
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <!-- <a href="#" target="_blank" rel="noopener noreferrer"
             ><Image
               src={iconF}
               alt=""
@@ -49,28 +71,34 @@ import { foodData, shopData } from '@/lib/shop-data'
               alt=""
               class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
             /></a
-          >
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          > -->
+          <a
+            href="https://x.com/nabenokunijp?s=21"
+            target="_blank"
+            rel="noopener noreferrer"
             ><Image
               src={iconX}
               alt=""
               class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
             /></a
           >
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://www.instagram.com/nabenokunijp?igsh=NWY0MG9mNTdvOG1h&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
             ><Image
               src={iconI}
               alt=""
               class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
             /></a
           >
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <!-- <a href="#" target="_blank" rel="noopener noreferrer"
             ><Image
               src={iconV}
               alt=""
               class="w-[48px] h-[48px] md:w-[65px] md:h-[65px]"
             /></a
-          >
+          > -->
         </div>
 
         <div
@@ -87,8 +115,7 @@ import { foodData, shopData } from '@/lib/shop-data'
           >
             日本全国の「鍋」をテーマにした食の祭典が、神宮外苑で開催されます！<br
             />
-            四季折々の食材と伝統の味わいを、地域特有の鍋料理を通じてお届け。老舗の味から新しい創作鍋まで、選りすぐりの品々を心ゆくまで堪能して
-            ください。さらに、地元で愛される地酒やビールと鍋の絶妙なペアリングもお楽しみいただけます。<br
+            四季折々の食材と伝統の味わいを、地域特有の鍋料理を通じてお届け。老舗の味から新しい創作鍋まで、選りすぐりの品々を心ゆくまで堪能してください。さらに、地元で愛される地酒やビールと鍋の絶妙なペアリングもお楽しみいただけます。<br
             />
             温かな鍋料理が繋ぐ「人と人」「地域と地域」の絆を感じながら、日本の多彩な食文化を体験できるイベントを創出します。
           </p>
@@ -124,7 +151,7 @@ import { foodData, shopData } from '@/lib/shop-data'
                 <td
                   class="pb-[25px] md:pb-[37px] pl-0 md:pl-[19px] pt-[13px] md:pt-0 leading-[31px] md:leading-[35px] w-full"
                 >
-                  鍋の国JAPAN & 北海道フェスティバル
+                  鍋の国JAPAN
                 </td>
               </tr>
               <tr class="flex flex-col w-full md:flex-row">
@@ -208,13 +235,13 @@ import { foodData, shopData } from '@/lib/shop-data'
                   title={shop.title}
                   subTitle={shop.subTitle}
                   menu={shop.menu}
+                  menu1={shop.menu1}
+                  menu2={shop.menu2}
                   description={shop.description}
                   image={shop.image}
                   image2={shop.image2}
+                  image3={shop.image3}
                   imgClass={shop.imgClass}
-                  dialogInfo={
-                    foodData.find((info) => info.id === shop.id)?.info
-                  }
                 />
               )
               // }
@@ -266,7 +293,11 @@ import { foodData, shopData } from '@/lib/shop-data'
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="http://www.meijijingugaien.jp/sports/baseball-ground/access.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div
             class="w-full md:w-[334px] relative bg-button py-[19px] pl-[32px] text-white text-[20px] leading-[32px] font-bold rounded-[10px] mx-auto mb-[52px] md:mb-[157px]"
           >
@@ -296,28 +327,34 @@ import { foodData, shopData } from '@/lib/shop-data'
             <div
               class="flex justify-center md:justify-start flex-wrap gap-[16.6px] w-full md:max-w-[177px]"
             >
-              <a href="#" target="_blank" rel="noopener noreferrer"
+              <!-- <a href="#" target="_blank" rel="noopener noreferrer"
                 ><Image src={iconF} alt="" class="w-[42px] h-[42px]" /></a
               >
               <a href="#" target="_blank" rel="noopener noreferrer"
                 ><Image src={iconD} alt="" class="w-[42px] h-[42px]" /></a
-              >
-              <a href="#" target="_blank" rel="noopener noreferrer"
+              > -->
+              <a
+                href="https://x.com/nabenokunijp?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><Image src={iconX} alt="" class="w-[42px] h-[42px]" /></a
               >
-              <a href="#" target="_blank" rel="noopener noreferrer"
+              <a
+                href="https://www.instagram.com/nabenokunijp?igsh=NWY0MG9mNTdvOG1h&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><Image src={iconI} alt="" class="w-[42px] h-[42px]" /></a
               >
-              <a href="#" target="_blank" rel="noopener noreferrer"
+              <!-- <a href="#" target="_blank" rel="noopener noreferrer"
                 ><Image src={iconV} alt="" class="w-[42px] h-[42px]" /></a
-              >
+              > -->
             </div>
           </div>
           <div class="md:ml-[69px] font-semibold">
             <p
               class="text-[18px] md:text-[27px] leading-[29px] md:leading-[47px] mt-[35px] md:mt-0"
             >
-              鍋の国JAPAN &<br class="md:hidden" /> 北海道フェスティバル
+              鍋の国JAPAN
             </p>
             <table
               class="mt-[28px] md:mt-[30px] table-fixed text-[13px] md:text-[14px]"
@@ -325,7 +362,7 @@ import { foodData, shopData } from '@/lib/shop-data'
               <tbody>
                 <tr>
                   <td
-                    class="content-start w-[56px] md:w-[79px] md:border-r md:border-[#888888]"
+                    class="align-text-top w-[56px] md:w-[79px] md:border-r md:border-[#888888]"
                     >日時</td
                   >
                   <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]">
@@ -339,7 +376,7 @@ import { foodData, shopData } from '@/lib/shop-data'
                   </td>
                 </tr>
                 <tr>
-                  <td class="content-start md:border-r md:border-[#888888]"
+                  <td class="align-text-top md:border-r md:border-[#888888]"
                     >会場</td
                   >
                   <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]"
@@ -347,7 +384,7 @@ import { foodData, shopData } from '@/lib/shop-data'
                   >
                 </tr>
                 <tr>
-                  <td class="content-start md:border-r md:border-[#888888]"
+                  <td class="align-text-top md:border-r md:border-[#888888]"
                     >入場料</td
                   >
                   <td class="pl-0 md:pl-[26px]"> 無料 </td>
@@ -367,13 +404,15 @@ import { foodData, shopData } from '@/lib/shop-data'
         </div>
 
         <div
-          class="mt-[20px] md:mt-[41px] text-white text-center text-[13px] leading-[23px] md:leading-[33px] pb-[60px] md:pb-[10px]"
+          class="mt-[20px] md:mt-[41px] text-white text-center text-[13px] leading-[23px] md:leading-[33px] pb-[84px] md:pb-0"
         >
           Copyright © 鍋の国JAPAN実行委員会 All Rights Reserved.<br
             class="md:hidden"
           />
-          主催者：<a href="https://www.bf-c.co.jp/" target="_blank"
-            >株式会社ビー・エフ・シー</a
+          主催者：<a
+            href="https://www.bf-c.co.jp/"
+            target="_blank"
+            rel="noopener noreferrer">株式会社ビー・エフ・シー</a
           >
         </div>
       </div>

@@ -3,7 +3,8 @@ export const shopData = [
 		id: "1",
 		title: "福岡",
 		subTitle: "",
-		menu: "福岡めんたいもつ鍋/博多水炊き",
+		menu1: "福岡めんたいもつ鍋",
+		menu2: "博多水炊き",
 		description: "",
 		image: "/assets/shop/shop1.png",
 		image2: "/assets/shop/shop2.png",
@@ -12,7 +13,8 @@ export const shopData = [
 		id: "2",
 		title: "京都",
 		subTitle: "",
-		menu: "京鴨鍋/京すき焼き（松坂牛）",
+		menu1: "京鴨鍋",
+		menu2: "京すき焼き（松坂牛）",
 		description: "",
 		image: "/assets/shop/shop3.png",
 		image2: "/assets/shop/shop4.png",
@@ -21,7 +23,8 @@ export const shopData = [
 		id: "3",
 		title: "北海道",
 		subTitle: "",
-		menu: "釧路カニ鍋/石狩鍋",
+		menu1: "釧路カニ鍋",
+		menu2: "石狩鍋",
 		description: "",
 		image: "/assets/shop/shop5.png",
 		image2: "/assets/shop/shop6.png",
@@ -30,7 +33,8 @@ export const shopData = [
 		id: "4",
 		title: "茨城/石川",
 		subTitle: "",
-		menu: "大洗あんこう鍋/能登ぶり鍋",
+		menu1: "大洗あんこう鍋",
+		menu2: "能登ぶり鍋",
 		description: "",
 		image: "/assets/shop/shop7.png",
 		image2: "/assets/shop/shop22.jpeg",
@@ -39,7 +43,8 @@ export const shopData = [
 		id: "5",
 		title: "横浜",
 		subTitle: "",
-		menu: "中華街トマト鍋/中華街麻辣鍋",
+		menu1: "中華街トマト鍋",
+		menu2: "中華街麻辣鍋",
 		description: "",
 		image: "/assets/shop/shop8.png",
 		image2: "/assets/shop/shop9.png",
@@ -48,7 +53,8 @@ export const shopData = [
 		id: "6",
 		title: "広島/山口",
 		subTitle: "",
-		menu: "広島牡蠣鍋/下関ふぐちり",
+		menu1: "広島牡蠣鍋",
+		menu2: "下関ふぐちり",
 		description: "",
 		image: "/assets/shop/shop10.png",
 		image2: "/assets/shop/shop11.png",
@@ -57,7 +63,8 @@ export const shopData = [
 		id: "7",
 		title: "秋田/岐阜",
 		subTitle: "",
-		menu: "秋田きりたんぽ鍋/各務原キムチの鍋",
+		menu1: "秋田きりたんぽ鍋",
+		menu2: "各務原キムチの鍋",
 		description: "",
 		image: "/assets/shop/shop12.png",
 		image2: "/assets/shop/shop13.png",
@@ -66,16 +73,18 @@ export const shopData = [
 		id: "8",
 		title: "山形/宮城",
 		subTitle: "",
-		menu: "山形芋煮鍋/仙台セリ鍋",
+		menu1: "山形芋煮鍋",
+		menu2: "仙台セリ鍋",
 		description: "",
-		image: "/assets/shop/shop14.png",
+		image: "/assets/shop/shop14.jpg",
 		image2: "/assets/shop/shop15.png",
 	},
 	{
 		id: "9",
 		title: "東京/愛媛",
 		subTitle: "",
-		menu: "両国ちゃんこ鍋/愛媛キジ鍋",
+		menu1: "両国ちゃんこ鍋",
+		menu2: "愛媛キジ鍋",
 		description: "",
 		image: "/assets/shop/shop16.png",
 		image2: "/assets/shop/shop17.png",
@@ -84,7 +93,8 @@ export const shopData = [
 		id: "10",
 		title: "群馬/長野",
 		subTitle: "",
-		menu: "高崎もつ煮/信州キノコ鍋",
+		menu1: "高崎もつ煮",
+		menu2: "信州キノコ鍋",
 		description: "",
 		image: "/assets/shop/shop18.png",
 		image2: "/assets/shop/shop19.png",
@@ -93,7 +103,8 @@ export const shopData = [
 		id: "11",
 		title: "三重/千葉",
 		subTitle: "",
-		menu: "三重イセエビ鍋/千葉漁師鍋",
+		menu1: "三重イセエビ鍋",
+		menu2: "千葉漁師鍋",
 		description: "",
 		image: "/assets/shop/shop23.jpeg",
 		image2: "/assets/shop/shop20.jpeg",
@@ -102,17 +113,22 @@ export const shopData = [
 		id: "12",
 		title: "ビール/スイーツ",
 		subTitle: "",
-		menu: "サッポロクラッシク/綿菓子",
+		menu1: "樽生サッポロクラシック",
+		menu2: "綿菓子",
+		menu3: "いちご飴",
 		description: "",
 		image: "/assets/shop/shop30.jpg",
 		image2: "/assets/shop/shop31.jpg",
-		imgClass: "object-contain max-h-[192px]",
+		image3: "/assets/menu/menu12_1.jpg",
+		imgClass: "object-contain",
 	},
 	{
 		id: "13",
 		title: "VIP",
 		subTitle: "",
 		menu: "しゃぶしゃぶ",
+		menu1: "",
+		menu2: "",
 		description: "",
 		image: "/assets/shop/shop21.png",
 		image2: "/assets/menu/menu13_4.jpeg",
@@ -122,13 +138,14 @@ export const shopData = [
 export const foodData = [
 	{
 		id: "1",
-		info: [
+		info1: [
 			{
 				title: "明太子",
 				price: "",
 				catchcopy: "",
 				description: "",
 				image: "",
+				imgClass: "",
 			},
 			{
 				title: "やわら角煮",
@@ -136,6 +153,7 @@ export const foodData = [
 				catchcopy: "",
 				description: "",
 				image: "",
+				imgClass: "",
 			},
 			{
 				title: "中津唐揚げ",
@@ -145,16 +163,14 @@ export const foodData = [
 				image: "",
 			},
 		],
-	},
-	{
-		id: "2",
-		info: [
+		info2: [
 			{
 				title: "くるくる鳥皮焼",
 				price: "",
 				catchcopy: "",
 				description: "",
 				image: "",
+				imgClass: "",
 			},
 			{
 				title: "地鶏炭火焼",
@@ -173,8 +189,8 @@ export const foodData = [
 		],
 	},
 	{
-		id: "3",
-		info: [
+		id: "2",
+		info1: [
 			{
 				title: "鴨のパストラミ",
 				price: "",
@@ -197,10 +213,7 @@ export const foodData = [
 				image: "",
 			},
 		],
-	},
-	{
-		id: "4",
-		info: [
+		info2: [
 			{
 				title: "京都おでん",
 				price: "",
@@ -225,8 +238,8 @@ export const foodData = [
 		],
 	},
 	{
-		id: "5",
-		info: [
+		id: "3",
+		info1: [
 			{
 				title: "帆立焼",
 				price: "",
@@ -249,10 +262,7 @@ export const foodData = [
 				image: "",
 			},
 		],
-	},
-	{
-		id: "6",
-		info: [
+		info2: [
 			{
 				title: "タコざんぎ",
 				price: "",
@@ -277,8 +287,8 @@ export const foodData = [
 		],
 	},
 	{
-		id: "10",
-		info: [
+		id: "6",
+		info1: [
 			{
 				title: "牡蛎フライ",
 				price: "",
@@ -301,10 +311,7 @@ export const foodData = [
 				image: "",
 			},
 		],
-	},
-	{
-		id: "11",
-		info: [
+		info2: [
 			{
 				title: "ふぐ唐揚げ",
 				price: "",
@@ -329,25 +336,47 @@ export const foodData = [
 		],
 	},
 	{
-		id: "12",
-		info: [
+		id: "7",
+		info1: [
 			{
-				title: "綿菓子",
+				title: "チーズ燻りかっこ",
 				price: "",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
-				title: "いちご りんご飴",
+				title: "もも焼",
 				price: "",
 				catchcopy: "",
 				description: "",
-				image: "/assets/menu/menu_a1.jpg",
-				imgClass: "object-contain",
+				image: "",
 			},
 			{
-				title: "チュロス",
+				title: "鹿角ホルモン焼",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+		],
+		info2: [
+			{
+				title: "キムチ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "あゆ焼き",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "けいちゃん焼き",
 				price: "",
 				catchcopy: "",
 				description: "",
@@ -356,48 +385,8 @@ export const foodData = [
 		],
 	},
 	{
-		id: "13",
-		info: [
-			{
-				title: "牛しゃぶしゃぶ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "/assets/menu/menu13_5.png",
-			},
-			{
-				title: "豚しゃぶしゃぶ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "/assets/menu/menu13_4.jpeg",
-			},
-			{
-				title: "ぶりしゃぶしゃぶ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "/assets/menu/menu13_2.jpeg",
-			},
-			{
-				title: "蟹しゃぶしゃぶ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "/assets/menu/menu13_3.jpeg",
-			},
-			{
-				title: "たこしゃぶしゃぶ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "/assets/menu/menu13_1.jpeg",
-			},
-		],
-	},
-	{
-		id: "16",
-		info: [
+		id: "9",
+		info1: [
 			{
 				title: "串揚げ盛り合わせ",
 				price: "",
@@ -469,10 +458,7 @@ export const foodData = [
 				image: "",
 			},
 		],
-	},
-	{
-		id: "17",
-		info: [
+		info2: [
 			{
 				title: "名物じゃこ天",
 				price: "",
@@ -532,8 +518,8 @@ export const foodData = [
 		],
 	},
 	{
-		id: "18",
-		info: [
+		id: "10",
+		info1: [
 			{
 				title: "上州こんにゃくおでん",
 				price: "",
@@ -605,10 +591,7 @@ export const foodData = [
 				image: "",
 			},
 		],
-	},
-	{
-		id: "19",
-		info: [
+		info2: [
 			{
 				title: "信州野沢菜漬け",
 				price: "",
@@ -682,8 +665,80 @@ export const foodData = [
 		],
 	},
 	{
-		id: "20",
-		info: [
+		id: "11",
+		info1: [
+			{
+				title: "伊勢えびバター焼き",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "三重焼き鳥つくね",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "焼き鳥アスパラベーコン",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "三重焼き鳥皮",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "はまぐりの酒蒸し",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "チーズフライ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "エビ串",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "日本酒 地酒 三重県 鈴鹿市 清水清三郎商店 ザク ZAKU",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "瀧自慢 滝水流 はやせ 辛口一徹純米",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "半蔵の梅酒 【三重の有名酒蔵】",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+		],
+		info2: [
 			{
 				title: "くじらベーコン",
 				price: "",
@@ -757,83 +812,8 @@ export const foodData = [
 		],
 	},
 	{
-		id: "23",
-		info: [
-			{
-				title: "伊勢えびバター焼き",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "三重焼き鳥つくね",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "焼き鳥アスパラベーコン",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "三重焼き鳥皮",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "はまぐりの酒蒸し",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "チーズフライ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "エビ串",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "日本酒 地酒 三重県 鈴鹿市 清水清三郎商店 ザク ZAKU",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "瀧自慢 滝水流 はやせ 辛口一徹純米",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "半蔵の梅酒 【三重の有名酒蔵】",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-		],
-	},
-	{
-		id: "30",
-		info: [
+		id: "12",
+		info1: [
 			{
 				title: "レモンサワー",
 				price: "",
@@ -847,25 +827,24 @@ export const foodData = [
 				catchcopy: "",
 				description: "",
 				image: "",
+				imgClass: "",
 			},
 		],
-	},
-	{
-		id: "31",
-		info: [
+		info2: [
 			{
 				title: "綿菓子",
 				price: "",
 				catchcopy: "",
 				description: "",
-				image: "",
+				image: "/assets/shop/shop31.jpg",
 			},
 			{
-				title: "いちご りんご飴",
+				title: "いちご飴",
 				price: "",
 				catchcopy: "",
 				description: "",
-				image: "",
+				image: "/assets/menu/menu12_1.jpg",
+				imgClass: "object-contain",
 			},
 			{
 				title: "チュロス",
@@ -873,6 +852,46 @@ export const foodData = [
 				catchcopy: "",
 				description: "",
 				image: "",
+			},
+		],
+	},
+	{
+		id: "13",
+		info1: [
+			{
+				title: "牛しゃぶしゃぶ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "/assets/menu/menu13_5.png",
+			},
+			{
+				title: "豚しゃぶしゃぶ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "/assets/menu/menu13_4.jpeg",
+			},
+			{
+				title: "ぶりしゃぶしゃぶ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "/assets/menu/menu13_2.jpeg",
+			},
+			{
+				title: "蟹しゃぶしゃぶ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "/assets/menu/menu13_3.jpeg",
+			},
+			{
+				title: "たこしゃぶしゃぶ",
+				price: "",
+				catchcopy: "",
+				description: "",
+				image: "/assets/menu/menu13_1.jpeg",
 			},
 		],
 	},
