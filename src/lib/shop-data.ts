@@ -14,7 +14,7 @@ export const shopData = [
 		title: "京都",
 		subTitle: "",
 		menu1: "京鴨鍋",
-		menu2: "京すき焼き（松坂牛）",
+		menu2: "京すき焼き",
 		description: "",
 		image: "/assets/shop/shop3.png",
 		image2: "/assets/shop/shop4.png",
@@ -137,11 +137,33 @@ export const shopData = [
 
 export const foodData = [
 	{
-		id: "1",
-		info1: [
+		id: "1", // 福岡
+		info: [
+			{
+				title: "福岡めんたいもつ鍋",
+				price: "1200",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop1.png",
+			},
+			{
+				title: "博多水炊き",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop2.png",
+			},
 			{
 				title: "明太子",
-				price: "",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+				imgClass: "",
+			},
+			{
+				title: "くるくる鳥皮焼",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -149,24 +171,7 @@ export const foodData = [
 			},
 			{
 				title: "やわら角煮",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-				imgClass: "",
-			},
-			{
-				title: "中津唐揚げ",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-		],
-		info2: [
-			{
-				title: "くるくる鳥皮焼",
-				price: "",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -174,14 +179,35 @@ export const foodData = [
 			},
 			{
 				title: "地鶏炭火焼",
-				price: "",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "中津唐揚げ",
+				price: "700",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "鶏飯",
-				price: "",
+				price: "600",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "福岡もつ鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "からし高菜",
+				price: "500",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -189,8 +215,22 @@ export const foodData = [
 		],
 	},
 	{
-		id: "2",
-		info1: [
+		id: "2", // 京都
+		info: [
+			{
+				title: "京鴨鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop3.png",
+			},
+			{
+				title: "京すき焼き",
+				price: "1200",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop4.png",
+			},
 			{
 				title: "鴨のパストラミ",
 				price: "",
@@ -199,8 +239,22 @@ export const foodData = [
 				image: "",
 			},
 			{
+				title: "京都おでん",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
 				title: "ねぎ焼",
-				price: "",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "京ぜんざい",
+				price: "600",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -212,25 +266,30 @@ export const foodData = [
 				description: "",
 				image: "",
 			},
-		],
-		info2: [
-			{
-				title: "京都おでん",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "京ぜんざい",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
 			{
 				title: "京漬物",
-				price: "",
+				price: "600",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "鴨ねぎ焼",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "京都土手煮",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "京甘酒",
+				price: "600",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -238,48 +297,60 @@ export const foodData = [
 		],
 	},
 	{
-		id: "3",
-		info1: [
+		id: "3", // 北海道
+		info: [
+			{
+				title: "釧路カニ鍋",
+				price: "1200",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop5.png",
+			},
+			{
+				title: "石狩鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop6.png",
+			},
 			{
 				title: "帆立焼",
-				price: "",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
-			{
-				title: "蟹甲羅焼",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-			{
-				title: "じゃがバター",
-				price: "",
-				catchcopy: "",
-				description: "",
-				image: "",
-			},
-		],
-		info2: [
 			{
 				title: "タコざんぎ",
-				price: "",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "蟹みそ甲羅焼",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "ジンギスカン",
-				price: "",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "じゃがバター",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "ラムチョップ",
-				price: "",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -287,34 +358,46 @@ export const foodData = [
 		],
 	},
 	{
-		id: "6",
-		info1: [
+		id: "6", // 広島/山口
+		info: [
+			{
+				title: "広島牡蠣鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop10.png",
+			},
 			{
 				title: "牡蛎フライ",
-				price: "",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "蒸牡蛎",
-				price: "",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "牡蛎バター",
-				price: "",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
-		],
-		info2: [
+			{
+				title: "下関ふぐちり",
+				price: "1200",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop11.png",
+			},
 			{
 				title: "ふぐ唐揚げ",
-				price: "",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
@@ -328,65 +411,112 @@ export const foodData = [
 			},
 			{
 				title: "ふぐ皮ポン酢",
-				price: "",
+				price: "700",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
+			{
+				title: "ふぐたたき",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "ふぐひれ酒",
+				price: "800",
+				catchcopy: "",
+				description: "",
+				image: "",
+			}
 		],
 	},
 	{
-		id: "7",
-		info1: [
+		id: "7", // 秋田/岐阜
+		info: [
+			{
+				title: "秋田きりたんぽ鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop12.png",
+			},
 			{
 				title: "チーズ燻りかっこ",
-				price: "",
+				price: "700",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "もも焼",
-				price: "",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
-				title: "鹿角ホルモン焼",
-				price: "",
+				title: "鹿角ホルモン焼き",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
-		],
-		info2: [
+			{
+				title: "燻りがっこ",
+				price: "600",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "各務原キムチの鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop13.png",
+			},
 			{
 				title: "キムチ",
-				price: "",
+				price: "600",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
 				title: "あゆ焼き",
-				price: "",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
-				title: "けいちゃん焼き",
-				price: "",
+				title: "鶏ちゃん焼",
+				price: "800",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
+			{
+				title: "飛騨赤かぶ漬け",
+				price: "500",
+				catchcopy: "",
+				description: "",
+				image: "",
+			}
 		],
 	},
 	{
 		id: "9",
-		info1: [
+		info: [
+			{
+				title: "両国ちゃんこ鍋",
+				price: "1000",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop16.png",
+			},
 			{
 				title: "串揚げ盛り合わせ",
 				price: "",
@@ -457,8 +587,13 @@ export const foodData = [
 				description: "",
 				image: "",
 			},
-		],
-		info2: [
+			{
+				title: "愛媛キジ鍋",
+				price: "1500",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop17.png",
+			},
 			{
 				title: "名物じゃこ天",
 				price: "",
@@ -519,7 +654,14 @@ export const foodData = [
 	},
 	{
 		id: "10",
-		info1: [
+		info: [
+			{
+				title: "高崎もつ煮",
+				price: "600",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop18.png",
+			},
 			{
 				title: "上州こんにゃくおでん",
 				price: "",
@@ -590,8 +732,13 @@ export const foodData = [
 				description: "",
 				image: "",
 			},
-		],
-		info2: [
+			{
+				title: "信州キノコ鍋",
+				price: "900",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop19.png",
+			},
 			{
 				title: "信州野沢菜漬け",
 				price: "",
@@ -666,7 +813,14 @@ export const foodData = [
 	},
 	{
 		id: "11",
-		info1: [
+		info: [
+			{
+				title: "三重イセエビ鍋",
+				price: "1500",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop23.jpeg",
+			},
 			{
 				title: "伊勢えびバター焼き",
 				price: "",
@@ -737,8 +891,13 @@ export const foodData = [
 				description: "",
 				image: "",
 			},
-		],
-		info2: [
+			{
+				title: "千葉漁師鍋",
+				price: "1200",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop20.jpeg",
+			},
 			{
 				title: "くじらベーコン",
 				price: "",
@@ -812,35 +971,68 @@ export const foodData = [
 		],
 	},
 	{
-		id: "12",
-		info1: [
+		id: "12", // ビール/スイーツ
+		info: [
+			{
+				title: "樽生サッポロクラシック",
+				price: "700",
+				catchcopy: "",
+				description: "",
+				image: "/assets/shop/shop30.jpg",
+				imgClass: "object-contain",
+			},
 			{
 				title: "レモンサワー",
-				price: "",
+				price: "700",
 				catchcopy: "",
 				description: "",
 				image: "",
 			},
 			{
-				title: "ハイボール",
-				price: "",
+				title: "余市ハイボール",
+				price: "1000",
 				catchcopy: "",
 				description: "",
 				image: "",
-				imgClass: "",
 			},
-		],
-		info2: [
+			{
+				title: "ニッカリッチブレンドハイボール",
+				price: "700",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "ソフトドリンク各種",
+				price: "300",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "マスカ/りんごスカッシュ",
+				price: "600",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
 			{
 				title: "綿菓子",
-				price: "",
+				price: "600",
 				catchcopy: "",
 				description: "",
 				image: "/assets/shop/shop31.jpg",
 			},
 			{
-				title: "いちご飴",
-				price: "",
+				title: "七色綿あめ",
+				price: "600",
+				catchcopy: "",
+				description: "",
+				image: "",
+			},
+			{
+				title: "いちご/マスカット/りんご飴",
+				price: "600",
 				catchcopy: "",
 				description: "",
 				image: "/assets/menu/menu12_1.jpg",
@@ -848,16 +1040,16 @@ export const foodData = [
 			},
 			{
 				title: "チュロス",
-				price: "",
+				price: "600",
 				catchcopy: "",
 				description: "",
 				image: "",
-			},
+			}
 		],
 	},
 	{
 		id: "13",
-		info1: [
+		info: [
 			{
 				title: "牛しゃぶしゃぶ",
 				price: "",
