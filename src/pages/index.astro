@@ -13,6 +13,7 @@ import iconX from '@/assets/img_logo_x.png'
 import iconN from '@/assets/img_small_nabe.png'
 import banner from '@/assets/img_banner.png'
 import bannerSp from '@/assets/img_banner_sp.png'
+import accessInfo from '@/assets/img_access_info.png'
 
 import { ShopCard } from '@/components/Common/ShopCard'
 import { shopData } from '@/lib/shop-data'
@@ -134,7 +135,7 @@ import { shopData } from '@/lib/shop-data'
         </div>
 
         <div
-          class="bg-white px-[20px] pt-[30px] md:pt-[52px] md:pl-[123px] md:pb-[59px] rounded-[10px] drop-shadow-og mb-[56px] md:mb-[70px]"
+          class="bg-white px-[20px] pt-[30px] pb-[20px] md:p-[50px] rounded-[10px] drop-shadow-og mb-[56px] md:mb-[70px]"
         >
           <table
             class="table-fixed text-[15px] md:text-[18px] font-semibold text-black"
@@ -206,6 +207,16 @@ import { shopData } from '@/lib/shop-data'
               </tr>
             </tbody>
           </table>
+          <div class="mt-[26px] h-[450px] w-full">
+            <div class="relative h-full">
+              <iframe
+                class="absolute w-full h-full"
+                loading="lazy"
+                src="https://platinumaps.jp/maps/nabenokuni-jingugaien"
+                allow="geolocation"
+                style="border: 0; background-color: #fafafa;"></iframe>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -237,10 +248,13 @@ import { shopData } from '@/lib/shop-data'
                   menu={shop.menu}
                   menu1={shop.menu1}
                   menu2={shop.menu2}
+                  menu3={shop.menu3}
+                  menu4={shop.menu4}
                   description={shop.description}
                   image={shop.image}
                   image2={shop.image2}
                   image3={shop.image3}
+                  image4={shop.image4}
                   imgClass={shop.imgClass}
                 />
               )
@@ -278,7 +292,11 @@ import { shopData } from '@/lib/shop-data'
           <p
             class="text-[12px] md:text-[16px] leading-[29px] md:leading-[32px]"
           >
-            〒160-0013 東京都新宿区霞ヶ丘町2-3
+            〒160-0013 東京都新宿区霞ヶ丘町2-3<br /><br />
+            <span class=""
+              >※入口は絵画館前から入場可能です。<br
+              />いちょう並木側からは入場できません。</span
+            >
           </p>
         </div>
 
@@ -291,6 +309,10 @@ import { shopData } from '@/lib/shop-data'
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="w-full max-w-[680px] mx-auto mb-[30px] md:mb-[50px]">
+          <Image src={accessInfo} alt="access info" class="w-full h-full" />
         </div>
 
         <a

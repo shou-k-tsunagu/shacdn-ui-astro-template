@@ -17,10 +17,13 @@ export interface Props {
 	menu?: string;
 	menu1: string;
 	menu2: string;
+	menu3?: string;
+	menu4?: string;
 	description: string;
 	image: string;
 	image2?: string;
 	image3?: string;
+	image4?: string;
 	imgClass?: string;
 }
 
@@ -32,9 +35,12 @@ export const ShopCard = ({
 	menu,
 	menu1,
 	menu2,
+	menu3,
+	menu4,
 	image,
 	image2,
 	image3,
+	image4,
 	imgClass,
 }: Props) => {
 	return (
@@ -48,9 +54,9 @@ export const ShopCard = ({
 						{subTitle || "　"}
 					</p> */}
 					
-						<div className={cn("flex justify-between", image3 ? "gap-[6px]" : "gap-[8px]")}>
+						<div className={cn("flex justify-between gap-[8px] flex-wrap")}>
 						{image && (
-							<div className="w-1/2">
+							<div className="w-[calc(50%-4px)]">
 								<img
 									src={image}
 									alt=""
@@ -65,7 +71,7 @@ export const ShopCard = ({
 							</div>
 						)}
 						{image2 && (
-							<div className="w-1/2">
+							<div className="w-[calc(50%-4px)]">
 								<img
 									src={image2}
 									alt=""
@@ -79,21 +85,39 @@ export const ShopCard = ({
 								</p>
 							</div>
 						)}
-						{image3 && (
-							<div className="w-[calc(50%-6px)]">
+							<div className="w-[calc(50%-4px)]">
+							{image3 && (
 								<img
 									src={image3}
 									alt=""
 									className={clsx(
 										"w-full rounded-[10px] border border-[#CCCCCC] h-[120px] md:h-[204px]",
-										imgClass ? imgClass : "object-cover",
+										"object-contain",
 									)}
 								/>
+							)}
+							{menu3 && (
 								<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
-								いちご飴
+									{menu3}
 								</p>
+							)}
 							</div>
-						)}
+							<div className="w-[calc(50%-4px)]">
+							{image4 && (
+								<img
+									src={image4}
+									alt=""
+									className={clsx(
+										"w-full rounded-[10px] border border-[#CCCCCC] h-[120px] md:h-[204px]",
+										"object-contain",
+									)}
+								/>)}
+							{menu4 && (
+								<p className="text-[13px] text-center md:text-[18px] md:leading-[36px] font-semibold whitespace-pre-line">
+									{menu4}
+								</p>
+								)}
+							</div>
 						</div>
 
 						{menu && (
@@ -133,7 +157,7 @@ export const ShopCard = ({
 											src={info?.image}
 											alt=""
 											className={cn(
-												"order-0 mt-[10px] md:mt-0 md:order-1 max-h-[245px] w-full md:max-w-[244px] md:h-[190px] mx-auto md:mx-0 object-cover border border-[#CCCCCC] rounded-[15px]",
+												"order-0 mt-[10px] md:mt-0 md:order-1 max-h-[245px] w-full md:max-w-[244px] md:h-[190px] mx-auto md:mx-0 object-contain border border-[#CCCCCC] rounded-[15px]",
 												info?.imgClass
 											)}
 										/>
