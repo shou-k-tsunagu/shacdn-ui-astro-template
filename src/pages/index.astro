@@ -14,6 +14,7 @@ import iconN from '@/assets/img_small_nabe.png'
 import banner from '@/assets/img_banner.png'
 import bannerSp from '@/assets/img_banner_sp.png'
 import accessInfo from '@/assets/img_access_info.png'
+import payList from '@/assets/img_pay_list.jpg'
 
 import { ShopCard } from '@/components/Common/ShopCard'
 import { shopData } from '@/lib/shop-data'
@@ -138,7 +139,7 @@ import { shopData } from '@/lib/shop-data'
           class="bg-white px-[20px] pt-[30px] pb-[20px] md:p-[50px] rounded-[10px] drop-shadow-og mb-[56px] md:mb-[70px]"
         >
           <table
-            class="table-fixed text-[15px] md:text-[18px] font-semibold text-black"
+            class="table-fixed w-full text-[15px] md:text-[18px] font-semibold text-black"
           >
             <tbody class="block">
               <tr class="flex flex-col w-full md:flex-row">
@@ -202,21 +203,41 @@ import { shopData } from '@/lib/shop-data'
                 <td
                   class="pt-[13px] md:pt-0 pb-[12px] md:pb-[35px] pl-0 md:pl-[19px] leading-[31px] md:leading-[35px]"
                 >
-                  無料
+                  無料<br />
+                  <span class="text-[12px] md:text-[14px]"
+                    >※ペットとも一緒にご来場いただけます！リードを付けてお楽しみください。</span
+                  ><br />
+                  飲食：有料　現金または以下決済方法がご利用いただけます。
+                  <Image
+                    src={payList}
+                    alt="決済方法"
+                    class="w-full md:max-w-[570px]"
+                  />
+                </td>
+              </tr>
+              <tr class="flex flex-col w-full md:flex-row">
+                <td class="content-start">
+                  <div
+                    class="w-[97px] md:w-[108px] rounded-[6px] bg-tag text-center leading-[30px] md:leading-[35px] text-white"
+                  >
+                    会場MAP
+                  </div>
+                </td>
+                <td
+                  class="pt-[13px] h-[450px] w-full md:pt-0 pb-[12px] md:pb-[35px] pl-0 md:pl-[19px] leading-[31px] md:leading-[35px]"
+                >
+                  <div class="relative h-full">
+                    <iframe
+                      class="absolute w-full h-full"
+                      loading="lazy"
+                      src="https://platinumaps.jp/maps/nabenokuni-jingugaien"
+                      allow="geolocation"
+                      style="border: 0; background-color: #fafafa;"></iframe>
+                  </div>
                 </td>
               </tr>
             </tbody>
           </table>
-          <div class="mt-[26px] h-[450px] w-full">
-            <div class="relative h-full">
-              <iframe
-                class="absolute w-full h-full"
-                loading="lazy"
-                src="https://platinumaps.jp/maps/nabenokuni-jingugaien"
-                allow="geolocation"
-                style="border: 0; background-color: #fafafa;"></iframe>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -333,7 +354,7 @@ import { shopData } from '@/lib/shop-data'
         </a>
 
         <div
-          class="flex flex-col text-white md:flex-row md:h-[418px] rounded-[6px] md:rounded-[30px] bg-black px-[20px] md:px-[50px] pt-[26px] pb-[41px] md:py-[36px]"
+          class="flex flex-col text-white md:flex-row rounded-[6px] md:rounded-[30px] bg-black px-[20px] md:px-[50px] pt-[26px] pb-[41px] md:py-[36px]"
         >
           <div class="">
             <Image
@@ -384,7 +405,7 @@ import { shopData } from '@/lib/shop-data'
               <tbody>
                 <tr>
                   <td
-                    class="align-text-top w-[56px] md:w-[79px] md:border-r md:border-[#888888]"
+                    class="align-text-top w-[79px] md:border-r md:border-[#888888]"
                     >日時</td
                   >
                   <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]">
@@ -409,7 +430,21 @@ import { shopData } from '@/lib/shop-data'
                   <td class="align-text-top md:border-r md:border-[#888888]"
                     >入場料</td
                   >
-                  <td class="pl-0 md:pl-[26px]"> 無料 </td>
+                  <td class="pb-[7px] md:pb-[20px] pl-0 md:pl-[26px]">
+                    無料<br />
+                    ※ペットとも一緒にご来場いただけます！リードを付けてお楽しみください。
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-text-top md:border-r md:border-[#888888]"
+                    >お問合せ先</td
+                  >
+                  <td class="pl-0 md:pl-[26px]">
+                    電話番号：<a href="tel:05017218895">050-1721-8895</a><br />
+                    メールアドレス：<a href="mailto:info@nabenokuni.jp"
+                      >info@nabenokuni.jp</a
+                    >
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -426,7 +461,7 @@ import { shopData } from '@/lib/shop-data'
         </div>
 
         <div
-          class="mt-[20px] md:mt-[41px] text-white text-center text-[13px] leading-[23px] md:leading-[33px] pb-[84px] md:pb-0"
+          class="mt-[20px] md:mt-[52px] text-white text-center text-[13px] leading-[23px] md:leading-[33px] pb-[84px] md:pb-0"
         >
           Copyright © 鍋の国JAPAN実行委員会 All Rights Reserved.<br
             class="md:hidden"

@@ -1225,8 +1225,7 @@ export const foodData = [
 				"price": "250",
 				"catchcopy": "",
 				"description": "",
-				"image": "/assets/menu/menu9/menu91.png",
-				imgClass: "object-cover",
+				"image": "/assets/menu/menu9/S__30646338_0.jpg",
 			},
 			{
 				"title": "アナゴ一本揚げ",
@@ -1265,8 +1264,7 @@ export const foodData = [
 				"price": "500",
 				"catchcopy": "",
 				"description": "",
-				"image": "/assets/menu/menu9/S__30646333_0.jpg",
-				imgClass: "object-contain",
+				"image": "/assets/menu/drinkn1.png",
 			},
 			{
 				"title": "日本酒 屋守",
@@ -1337,8 +1335,7 @@ export const foodData = [
 				"price": "500",
 				"catchcopy": "",
 				"description": "",
-				"image": "/assets/menu/menu9/S__30646318_0.jpg",
-				imgClass: "object-contain",
+				"image": "/assets/menu/drinkn1.png",
 			},
 			{
 				"title": "日本酒 石鎚 純米吟醸",
@@ -1465,13 +1462,13 @@ export const foodData = [
 					description: "",
 					image: "/assets/menu/menu10/drink102.png"
 				},
-				// {
-				// 	title: "ノンアルコールビール",
-				// 	price: "500",
-				// 	catchcopy: "",
-				// 	description: "",
-				// 	image: ""
-				// },
+				{
+					"title": "ノンアルコールビール",
+					"price": "500",
+					"catchcopy": "",
+					"description": "",
+					"image": "/assets/menu/drinkn1.png",
+				},
 				{
 					title: "信州キノコ鍋",
 					price: "900",
@@ -1548,12 +1545,12 @@ export const foodData = [
 					image: "/assets/menu/menu10/drink103.png"
 				},
 				{
-					title: "ノンアルコールビール",
-					price: "500",
-					catchcopy: "",
-					description: "",
-					image: "/assets/menu/menu10/S__30646345_0.jpg"
-				}
+					"title": "ノンアルコールビール",
+					"price": "500",
+					"catchcopy": "",
+					"description": "",
+					"image": "/assets/menu/drinkn1.png",
+				},
 		],
 	},
 	{
@@ -1655,7 +1652,7 @@ export const foodData = [
 				"price": "500",
 				"catchcopy": "",
 				"description": "",
-				"image": "/assets/menu/menu11/S__30646287_0.jpg"
+				"image": "/assets/menu/drinkn1.png",
 			},
 			{
 				"title": "千葉漁師鍋",
@@ -1739,8 +1736,8 @@ export const foodData = [
 				"price": "500",
 				"catchcopy": "",
 				"description": "",
-				"image": "/assets/menu/menu11/S__30646306_0.jpg"
-			}
+				"image": "/assets/menu/drinkn1.png",
+			},
 		],
 	},
 	{
